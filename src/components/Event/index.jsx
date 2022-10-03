@@ -4,7 +4,11 @@ import LandingImg from "../../images/event.png";
 import Calendar from "../../images/calendar.svg";
 import Location from "../../images/location.svg";
 
-function Home() {
+function Event(props) {
+
+    // const { event } = props.location
+
+    // console.log(event)
   return (
     <div className="container mx-auto md:px-11 flex flex-col md:flex-row bg-backgroundEvent min-h-screen">
       <div>
@@ -13,9 +17,9 @@ function Home() {
 
       <div className="text-left px-5 py-3">
         <h2 className="font-bold text-heading text-[28px]">Birthday Bash</h2>
-        <p className="text-gray2 text-sm">Hosted by Elysia</p>
+        <p className="text-gray2 text-sm py-2">Hosted by Elysia</p>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 py-4">
           <div className="flex gap-[20px] justify-between items-center">
             <div className="flex gap-[20px]">
               <div className="w-[48px] h-[48px] rounded-[10px] p-[14px] flex justify-center items-center drop-shadow-iconBox bg-white">
@@ -53,4 +57,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Event;

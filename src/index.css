@@ -1,4 +1,4 @@
-@import url('http://fonts.cdnfonts.com/css/helvetica-2?styles=65655,65653,65657,65659');   
+/* @import url('http://fonts.cdnfonts.com/css/helvetica-2?styles=65655,65653,65657,65659');    */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,4 +15,19 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("./font/bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("./font/light.ttf");
+  font-weight: light;
+  font-style: normal;
 }

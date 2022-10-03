@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div className="container mx-auto px-11 flex flex-col md:flex-row md:flex-row-reverse bg-backgroundLanding min-h-screen pt-20">
-      <div>
+    <div className="container mx-auto flex flex-col md:flex-row md:flex-row-reverse bg-backgroundLanding min-h-screen overflow-scroll pt-20">
+      <div >
         <h1 className="text-4xl font-bold text-heading">
           Imagine if <br />{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8456EC] to-[#E87BF8]">
@@ -20,14 +20,16 @@ function Home() {
         </p>
       </div>
 
-      <div>
-        <img src={LandingImg} alt="landing-hero" />
+      <div className="py-8 px-11">
+        <img src={LandingImg} alt="landing-hero" className="mb-12" />
+        <div>
         <Link
-          to="event"
-          className="py-4 px-[21px] rounded-[10px] bg-gradient-to-r from-[#8456EC] to-[#E87BF8]"
+          to="create"
+          className="py-8 px-[21px] rounded-[10px] bg-gradient-to-r from-[#8456EC] to-[#E87BF8]"
         >
           🎉 Create my event
         </Link>
+        </div>
       </div>
     </div>
   );
