@@ -40,7 +40,7 @@ function CreateEvent(props) {
                 pathname: "/event",
                 event: createSearchParams({
                     details: values
-                })
+                }).toString()
             })
           }}
           validationSchema={validationSchema}
@@ -50,7 +50,7 @@ function CreateEvent(props) {
             <Field
               id="hostName"
               name="hostName"
-              placeholder="Jane"
+              placeholder="Jane Doe"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-4"
             />
 
@@ -58,7 +58,7 @@ function CreateEvent(props) {
             <Field
               id="eventName"
               name="lastName"
-              placeholder="Doe"
+              placeholder="Birthday party"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-4"
             />
 
@@ -66,7 +66,7 @@ function CreateEvent(props) {
             <Field
               id="location"
               name="location"
-              placeholder="Doe"
+              placeholder="12, Lagos, Nigeria"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-4"
             />
 
@@ -74,7 +74,8 @@ function CreateEvent(props) {
             <Field
               id="image"
               name="image"
-              placeholder="Doe"
+              type="file" 
+              accept="image/*"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-4"
             />
 
@@ -82,7 +83,7 @@ function CreateEvent(props) {
             <Field
               id="startTime"
               name="startTime"
-              placeholder="Doe"
+              placeholder="8.00am"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-4"
             />
 
@@ -90,7 +91,7 @@ function CreateEvent(props) {
             <Field
               id="endTime"
               name="endTime"
-              placeholder="Doe"
+              placeholder="12:00pm"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-4"
             />
 
