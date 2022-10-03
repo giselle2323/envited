@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div className="container mx-auto px-11 flex flex-col md:flex-row md:flex-row-reverse">
+    <div className="container mx-auto px-11 flex flex-col md:flex-row md:flex-row-reverse bg-backgroundLanding min-h-screen pt-20">
       <div>
-        <h1 className="text-4xl font-bold">
+        <h1 className="text-4xl font-bold text-heading">
           Imagine if <br />{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8456EC] to-[#E87BF8]">
             Snapchat

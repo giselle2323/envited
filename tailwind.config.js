@@ -6,9 +6,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "#F6F2FF",
-        gray1: "#4F4F4F"
+        backgroundLanding: "#F6F2FF",
+        backgroundEvent: "#FBFAFF",
+        gray1: "#4F4F4F",
+        heading: "#240D57",
+        gray2: "#828282"
       },
+      dropShadow: {
+        'iconBox': '0 0px 5px rgba(0, 0, 0, 0.1)',
+      }
       
     },
    fontFamily: {

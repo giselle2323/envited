@@ -4,7 +4,7 @@ import RouterTree from './components/RouterTree';
 
 function App() {
   return (
-    <div className="App font-helvetica bg-background pt-20 min-h-screen">
+    <div className="App font-helvetica min-h-screen">
       <RouterTree />
     </div>
   );
