@@ -5,10 +5,15 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        helvetica: ['Helvetica', 'sans-serif'],
-      }
+      colors: {
+        background: "#F6F2FF",
+        gray1: "#4F4F4F"
+      },
+      
     },
+   fontFamily: {
+      helvetica: ['Helvetica', 'sans-serif'],
+    }, 
   },
   plugins: [],
 }
