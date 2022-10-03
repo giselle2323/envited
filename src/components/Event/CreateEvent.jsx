@@ -1,12 +1,12 @@
 import * as React from "react";
 import * as Yup from "yup";
+import { useNavigate, createSearchParams } from "react-router-dom";
 import { Formik, Field, Form } from "formik";
-import { VscChevronRight } from "react-icons/vsc";
 import LandingImg from "../../images/create-event.jpg";
-import Calendar from "../../images/calendar.svg";
-import Location from "../../images/location.svg";
+
 
 function CreateEvent(props) {
+    const navigate = useNavigate()
   const validationSchema = Yup.object().shape({
     eventName: Yup.string().required().min(1).label("Event Name"),
     hostName: Yup.string().required().min(1).max(10000).label("Host name"),
@@ -16,14 +16,6 @@ function CreateEvent(props) {
     image: Yup.array().min(1, "Please select at least one image"),
   });
 
-  const handleSubmit = async (event, { resetForm }) => {
-    props.history.push({
-      pathname: "/event",
-      state: event, // your data array of objects
-    });
-
-    resetForm();
-  };
   return (
     <div className="container mx-auto flex flex-col md:flex-row bg-backgroundEvent min-h-screen pt-20">
       <div className="flex-1">
@@ -44,10 +36,12 @@ function CreateEvent(props) {
             image: [],
           }}
           onSubmit={async (values) => {
-            props.history.push({
-              pathname: "/event",
-              event: values,
-            });
+            navigate({
+                pathname: "/event",
+                event: createSearchParams({
+                    details: values
+                })
+            })
           }}
           validationSchema={validationSchema}
         >
